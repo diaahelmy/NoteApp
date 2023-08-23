@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    >
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.NewNoteFragment">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/etNotetitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:ems="10"
+                android:hint="Type your title"
+                android:inputType="text"
+                android:textColor = "?android:textColorPrimary"
+                android:textSize="20sp"
+                android:textStyle="bold"
+
+                />
+
+            <EditText
+                android:id="@+id/etnotebody"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@android:color/transparent"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Type something..."
+                android:inputType="textMultiLine"
+                android:textColor = "?android:textColorPrimary"
+                android:textColorHint="@color/bluelight"
+                android:textSize="16sp"
+
+
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                >
+
+                <DatePicker
+                    android:id="@+id/datepickernew"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="-30dp"
+                    android:layout_weight="1"
+                    android:calendarViewShown="false"
+                    android:datePickerMode="spinner"
+                    android:scaleX="0.7"
+                    android:scaleY="0.7"
+                    android:layout_marginStart="-50dp"
+                    android:layout_marginEnd="-50dp"
+                    android:visibility="gone"
+                />
+<!--                    android:visibility="gone"-->
+
+
+                <TimePicker
+                    android:id="@+id/timepickernew"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="-30dp"
+                    android:layout_weight="1"
+                    android:timePickerMode="spinner"
+                    android:scaleX="0.7"
+                    android:scaleY="0.7"
+                    android:layout_marginEnd="-20dp"
+                    android:layout_marginStart="-20dp"
+                    android:visibility="gone"
+                    />
+<!--                    -->
+
+
+
+            </LinearLayout>
+            <Button
+                android:id="@+id/donenew"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:shadowRadius="10"
+                android:layout_gravity="center"
+                android:text="Done"
+                android:visibility="gone"
+                />
+<!--                android:visibility="gone"-->
+
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
